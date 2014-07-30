@@ -1,0 +1,18 @@
+#!/bin/sh
+# ----------------------------------------------------------------------------
+# file:     ~/.xinitrc
+# author:   Daniel Henschel - http://is-bored.de
+# modified: July 2014
+# vim:      si:et:ts=4:sw=4:ft=sh
+# ----------------------------------------------------------------------------
+
+# settings
+xrdb "$XDG_CONFIG_HOME"/Xresources  # load configuration
+xmodmap "$XDG_CONFIG_HOME"/xmodmap  # key binds
+
+# daemons
+/usr/bin/urxvtd -q -o -f        # terminal daemon
+/usr/bin/nitrogen --restore &   # wallpaper
+
+# window manager
+exec i3

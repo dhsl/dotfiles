@@ -1,0 +1,5 @@
+folder-hook henschel/*      source ~/.mutt/accounts/henschel
+folder-hook hacico/*        source ~/.mutt/accounts/hacico
+folder-hook dariercleef/*   source ~/.mutt/accounts/dariercleef
+
+source ~/.mutt/accounts/henschel

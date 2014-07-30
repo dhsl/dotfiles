@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+secure() {
+    local arg
+
+    for arg; do
+        if [ -d "$arg" ]; then
+            chmod 700 "$arg"
+        elif [ -f "$arg" ]; then
+            chmod 600 "$arg"
+        fi
+    done
+}
+
+setup_vundle() {
+  local bundles="$HOME/.vim/bundle"
+
+  if [ ! -d "$bundles"/vundle ]; then
+    mkdir -p "$bundles"
+    git clone https://github.com/gmarik/Vundle.vim "$bundles"/vundle
+  fi
+
+  vim +PluginInstall +qall
+}
+
+secure ~/.config/gnupg ~/.msmtprc ~/passwords
+
+grep -sq '^Plugin' ~/.vimrc && setup_vundle

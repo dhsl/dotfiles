@@ -1,0 +1,139 @@
+Create Slave
+SyncState *
+Expunge Both
+
+IMAPAccount henschel
+Host mail.messagingengine.com
+User daniel@henschel.cc
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/passwords/mail_henschel.gpg"
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore henschel-remote
+Account henschel
+
+MaildirStore henschel-local
+Path ~/Mail/henschel/
+Inbox ~/Mail/henschel/INBOX
+
+Channel henschel-inbox
+Master :henschel-remote:INBOX
+Slave :henschel-local:INBOX
+
+Channel henschel-archive
+Master :henschel-remote:Archive
+Slave :henschel-local:archive
+
+Channel henschel-drafts
+Master :henschel-remote:Drafts
+Slave :henschel-local:drafts
+
+Channel henschel-sent
+Master ":henschel-remote:Sent Items"
+Slave :henschel-local:sent
+
+Channel henschel-spam
+Master ":henschel-remote:Junk Mail"
+Slave :henschel-local:spam
+
+Channel henschel-trash
+Master :henschel-remote:Trash
+Slave :henschel-local:Trash
+
+Group henschel
+Channel henschel-inbox
+Channel henschel-archive
+Channel henschel-drafts
+Channel henschel-sent
+Channel henschel-spam
+Channel henschel-trash
+
+IMAPAccount hacico
+Host mail.hacico.de
+User d.henschel@hacico.de
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/passwords/mail_hacico.gpg"
+CertificateFile ~/.certs/mail.hacico.de.pem
+
+IMAPStore hacico-remote
+Account hacico
+
+MaildirStore hacico-local
+Path ~/Mail/hacico/
+Inbox ~/Mail/hacico/INBOX
+
+Channel hacico-inbox
+Master :hacico-remote:INBOX
+Slave :hacico-local:INBOX
+
+Channel hacico-archive
+Master :hacico-remote:Archives
+Slave :hacico-local:archive
+
+Channel hacico-drafts
+Master :hacico-remote:Drafts
+Slave :hacico-local:drafts
+
+Channel hacico-sent
+Master :hacico-remote:Sent
+Slave :hacico-local:sent
+
+Channel hacico-spam
+Master :hacico-remote:Spam
+Slave :hacico-local:spam
+
+Channel hacico-trash
+Master :hacico-remote:Trash
+Slave :hacico-local:trash
+
+Group hacico
+Channel hacico-inbox
+Channel hacico-archive
+Channel hacico-drafts
+Channel hacico-sent
+Channel hacico-spam
+Channel hacico-trash
+
+IMAPAccount dariercleef
+Host mail.hacico.de
+User d.henschel@dariercleef.de
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/passwords/mail_dariercleef.gpg"
+CertificateFile ~/.certs/mail.hacico.de.pem
+
+IMAPStore dariercleef-remote
+Account dariercleef
+
+MaildirStore dariercleef-local
+Path ~/Mail/dariercleef/
+Inbox ~/Mail/dariercleef/INBOX
+
+Channel dariercleef-inbox
+Master :dariercleef-remote:INBOX
+Slave :dariercleef-local:INBOX
+
+Channel dariercleef-archive
+Master :dariercleef-remote:Archives
+Slave :dariercleef-local:archive
+
+Channel dariercleef-drafts
+Master :dariercleef-remote:Drafts
+Slave :dariercleef-local:drafts
+
+Channel dariercleef-sent
+Master :dariercleef-remote:Sent
+Slave :dariercleef-local:sent
+
+Channel dariercleef-spam
+Master :dariercleef-remote:Spam
+Slave :dariercleef-local:spam
+
+Channel dariercleef-trash
+Master :dariercleef-remote:Trash
+Slave :dariercleef-local:trash
+
+Group dariercleef
+Channel dariercleef-inbox
+Channel dariercleef-archive
+Channel dariercleef-drafts
+Channel dariercleef-sent
+Channel dariercleef-spam
+Channel dariercleef-trash

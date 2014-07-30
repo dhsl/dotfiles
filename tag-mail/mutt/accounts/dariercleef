@@ -1,0 +1,7 @@
+set from        = "d.henschel@dariercleef.de"
+set sendmail    = "/usr/bin/msmtp -a dariercleef"
+set mbox        = "+dariercleef/archive"
+set postponed   = "+dariercleef/drafts"
+
+macro index ,z "<shell-escape>mbsync --pull-new dariercleef-inbox<enter>" "sync IMAP"
+macro index D "<save-message>+dariercleef/archive<enter>" "move message to trash"

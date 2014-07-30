@@ -1,0 +1,7 @@
+set from        = "d.henschel@hacico.de"
+set sendmail    = "/usr/bin/msmtp -a hacico"
+set mbox        = "+hacico/archive"
+set postponed   = "+hacico/drafts"
+
+macro index ,z "<shell-escape>mbsync --pull-new hacico-inbox<enter>" "sync IMAP"
+macro index D "<save-message>+hacico/archive<enter>" "move message to trash"

@@ -1,0 +1,54 @@
+! ----------------------------------------------------------------------------
+! file:     ~/.Xresources
+! author:   Daniel Henschel - http://is-bored.de/
+! modified: July 2014
+! vim:      si:et:ts=4:sw=4:ft=xdefaults
+! ----------------------------------------------------------------------------
+
+! xft settings
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! rxvt-unicode
+URxvt.depth:           32
+URxvt.font:            xft:Menlo for Powerline:pixelsize=10
+URxvt.boldFont:        xft:Menlo for Powerline:pixelsize=10
+URxvt.italicFont:      xft:Menlo for Powerline:pixelsize=10
+URxvt.boldItalicFont:  xft:Menlo for Powerline:pixelsize=10
+URxvt.imLocale:        en_US.UTF-8
+URxvt.inheritPixmap:   false
+URxvt.internalBorder:  5
+URxvt.matcher.button:  1
+URxvt.perl-ext-common: default,matcher
+URxvt.saveLines:       65535
+URxvt.scrollBar:       false
+URxvt.secondaryScroll: false
+URxvt.urgentOnBell:    true
+URxvt.url-launcher:    /usr/bin/chromium
+URxvt.visualBell:      true
+
+URxvt.background:            #002b36
+URxvt.foreground:            #657b83
+!URxvt.fading:                40
+!URxvt.fadeColor:            #002b36
+URxvt.cursorColor:           #93a1a1
+URxvt.pointerColorBackground:#586e75
+URxvt.pointerColorForeground:#93a1a1
+URxvt.color0:                #073642
+URxvt.color1:                #dc322f
+URxvt.color2:                #859900
+URxvt.color3:                #b58900
+URxvt.color4:                #268bd2
+URxvt.color5:                #d33682
+URxvt.color6:                #2aa198
+URxvt.color7:                #eee8d5
+URxvt.color8:                #002b36
+URxvt.color9:                #cb4b16
+URxvt.color10:               #586e75
+URxvt.color11:               #657b83
+URxvt.color12:               #839496
+URxvt.color13:               #6c71c4
+URxvt.color14:               #93a1a1
+URxvt.color15:               #fdf6e3
