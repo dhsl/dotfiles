@@ -1,0 +1,6 @@
+[user]
+    email = daniel@henschel.cc
+    name = Daniel Henschel
+    signingkey = 66E8A26C
+[push]
+	default = current
