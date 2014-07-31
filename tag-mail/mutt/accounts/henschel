@@ -2,6 +2,7 @@ set from        = "daniel@henschel.cc"
 set sendmail    = "/usr/bin/msmtp -a henschel"
 set mbox        = "+henschel/archive"
 set postponed   = "+henschel/drafts"
+set record      = "+henschel/sent"
 
 macro index ,z "<shell-escape>mbsync --pull-new henschel-inbox<enter>" "sync IMAP"
 macro index D "<save-message>+henschel/archive<enter>" "move message to trash"

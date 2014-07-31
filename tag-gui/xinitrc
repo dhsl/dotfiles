@@ -13,6 +13,7 @@ xmodmap "$XDG_CONFIG_HOME"/xmodmap  # key binds
 # daemons
 /usr/bin/urxvtd -q -o -f        # terminal daemon
 /usr/bin/nitrogen --restore &   # wallpaper
+/usr/bin/udiskie -2 &           # automount
 
 # window manager
 exec i3
