@@ -1,0 +1,23 @@
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+
+export RCRC="$XDG_CONFIG_HOME"/rcrc
+
+# main utils
+export LESS='-F -g -i -M -R -S -w -X -z-4'
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='37'
+
+eval "$(dircolors)"
+
+alias s="TERM=rxvt-unicode ssh"
+alias ls="ls --color=auto"
+
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
