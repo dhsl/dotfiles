@@ -1,11 +1,15 @@
 function start_gpg_agent() {
-  local gpg_env="$XDG_CACHE_HOME/gpg-env"
+    local gpg_env="$XDG_CACHE_HOME/gpg-env"
 
-  if ! pgrep gpg-agent >/dev/null; then
-    gpg-agent --daemon > "$gpg_env"
-  fi
+    if ! (( $+commands[gpg-agent] )); then
+        return
+    fi
 
-  source "$gpg_env"
+    if ! pgrep gpg-agent >/dev/null; then
+        gpg-agent --daemon > "$gpg_env"
+    fi
+
+    source "$gpg_env"
 }
 
 export XDG_CACHE_HOME="$HOME"/.cache
@@ -23,5 +27,5 @@ export GREP_COLOR='37'
 start_gpg_agent
 
 if [[ $TTY == /dev/tty1 ]] && [[ -z $DISPLAY ]]; then
-  exec startx
+    exec startx
 fi
