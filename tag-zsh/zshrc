@@ -19,7 +19,7 @@ setopt HIST_BEEP                 # Beep when accessing non-existent history.
 
 eval "$(dircolors)"
 
-alias s="TERM=rxvt-unicode ssh"
+alias s="ssh"
 alias ls="ls --color=auto"
 
 export BROWSER='chromium'
