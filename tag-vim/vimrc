@@ -1,7 +1,7 @@
 " ----------------------------------------------------------------------------
 " file:     ~/.vimrc
 " author:   Daniel Henschel - http://is-bored.de/
-" modified: June 2013
+" modified: August 2014
 " vim:      si:et:ts=4:sw=4:ft=vim
 " ----------------------------------------------------------------------------
 
@@ -20,7 +20,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Lokaltog/powerline'
 filetype plugin indent on           " enable loading indent file for filetype
 
 " turn off swap and .viminfo
