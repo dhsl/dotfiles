@@ -276,8 +276,8 @@ settings = {
     timestamp_format = "%d.%H%M%S";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { autolog = "yes"; theme = "default"; };
-  "perl/core/scripts" = { screen_away_message = "Away"; };
+  "fe-common/core" = { autolog = "yes"; theme = "solarized"; };
+  "perl/core/scripts" = { tmux_away_message = "Away"; };
 };
 logs = { };
 ignores = ( { level = "MODES"; channels = ( "&bitlbee" ); } );
